@@ -5,7 +5,6 @@ import type { StackScreenProps } from '@react-navigation/stack';
 
 export type MainStackParamList = {
   [ScreenNames.MainTab]: undefined;
-  [ScreenNames.SplashScreen]: undefined;
   [ScreenNames.WelcomeScreen]: undefined;
 };
 
