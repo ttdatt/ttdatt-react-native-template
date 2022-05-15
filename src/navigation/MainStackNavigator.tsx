@@ -1,6 +1,7 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import RNBootSplash from 'react-native-bootsplash';
 import { MainStackParamList } from './types';
 import { navigationRef } from './utils';
 import { ScreenNames } from './screenNames';
@@ -11,6 +12,10 @@ const NavStack = createStackNavigator<MainStackParamList>();
 
 const MainStackNavigator = () => {
   const routeNameRef = useRef<string>();
+
+  useEffect(() => {
+    RNBootSplash.hide({ fade: true });
+  }, []);
 
   return (
     <NavigationContainer
